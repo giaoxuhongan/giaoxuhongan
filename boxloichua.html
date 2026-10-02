@@ -187,6 +187,60 @@ body { background: #ffffff; padding: 15px; }
     margin-top: 4px; 
     text-align: left; 
 } 
+
+/* =========================================================
+   TỰ ĐỘNG CHUYỂN ĐỔI GIAO DIỆN ĐIỆN THOẠI CHO HỘP LỜI CHÚA
+========================================================= */
+@media (max-width: 768px) {
+    /* 1. Xóa khoảng trống đệm lề mặc định của body */
+    body {
+        padding: 5px !important;
+    }
+
+    /* 2. Ép cấu trúc Flexbox chuyển từ hàng ngang thành hàng dọc */
+    .box-flex {
+        flex-direction: column !important;
+        height: auto !important; /* Hủy chiều cao cố định để nội dung dâng tự do */
+    }
+
+    /* 3. Ép khung xem trước bên trái mở rộng 100% màn hình dọc */
+    .col-left {
+        width: 100% !important;
+        padding: 15px !important;
+        border-right: none !important; /* Xóa vạch chia giữa cũ */
+        border-bottom: 2px solid #eee; /* Tạo vạch chia đáy mới */
+    }
+
+    /* 4. Hạ bớt chiều cao vùng ảnh lớn cho cân đối với màn hình dọc */
+    .img-wrap {
+        height: 200px !important;
+    }
+
+    /* 5. Ép danh sách tin bài bên phải mở rộng 100% và khống chế vùng cuộn dọc */
+    .col-right {
+        width: 100% !important;
+        height: 300px !important; /* Giới hạn vùng danh sách vừa vặn trên điện thoại */
+        overflow-y: auto !important;
+    }
+
+    /* Tối ưu các nút tab tiêu đề trên điện thoại cho khỏi tràn hàng */
+    .t-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    .t-tabs {
+        width: 100% !important;
+        overflow-x: auto !important; /* Tự động mọc cuộn ngang nếu tab quá dài */
+        padding-bottom: 5px;
+    }
+    .t-btn {
+        font-size: 14px !important;
+        padding: 0 8px 5px 8px !important;
+        white-space: nowrap !important; /* Chống rớt chữ xuống dòng */
+    }
+}
+
 </style>
 </head>
 <body>
