@@ -26,7 +26,7 @@ body { background: #ffffff; padding: 15px; }
     display: flex; 
     justify-content: space-between; 
     align-items: flex-end; 
-    border-bottom: 2px solid var(--xanh); 
+    border-bottom: 1px solid #db5d2b; 
     margin-bottom: 15px; 
     padding-bottom: 5px; 
 } 
@@ -34,13 +34,13 @@ body { background: #ffffff; padding: 15px; }
     font-size: 18px; 
     font-weight: bold; 
     text-transform: uppercase; 
-    color: var(--xanh); 
+    color: #ff8c5e; 
 } 
 .t-tabs { display: flex; } 
 .t-btn { 
     font-size: 16px; 
     font-weight: bold; 
-    color: #449d39; 
+    color: #f18305; 
     cursor: pointer; 
     padding: 0 12px 5px 12px; 
     margin-left: 5px; 
@@ -49,8 +49,8 @@ body { background: #ffffff; padding: 15px; }
 } 
 .t-btn.active, 
 .t-btn:hover { 
-    color: var(--xanh); 
-    border-bottom-color: var(--xanh); 
+    color: #d80000; 
+  
 } 
 .box-flex { 
     display: flex; 
@@ -101,7 +101,7 @@ body { background: #ffffff; padding: 15px; }
 } 
 .p-title:hover {
     text-decoration: underline; /* THÊM KHỐI NÀY: Gạch chân tiêu đề khi rê chuột vào */
-    color: #f0f6a8 !important; /* THÊM KHỐI NÀY: Đổi màu tiêu đề khi rê chuột vào */
+    color: #4b9956 !important; /* THÊM KHỐI NÀY: Đổi màu tiêu đề khi rê chuột vào */
 }
 
  
@@ -139,7 +139,7 @@ body { background: #ffffff; padding: 15px; }
 
 .row-news:hover {
     background: #f1fcf5;
-    border-left-color: var(--blue);
+    border-left-color: #f1fcf5;
 }
 .row-news:hover .r-title {
     color: #4b9956 !important; 
@@ -149,8 +149,12 @@ body { background: #ffffff; padding: 15px; }
 }
 
 .row-news.active { 
-    background: #fafafa; 
-    border-left-color: var(--blue);
+    background: #e4f1e9; 
+    border-left-color: #115e07;
+
+    }
+.row-news.active .r-title {
+    color: #115e07 !important; 
     
 }
 
@@ -198,29 +202,37 @@ body { background: #ffffff; padding: 15px; }
     }
 
     /* 2. Ép cấu trúc Flexbox chuyển từ hàng ngang thành hàng dọc */
-    .box-flex {
+      .box-flex {
+        display: flex !important;
         flex-direction: column !important;
-        height: auto !important; /* Hủy chiều cao cố định để nội dung dâng tự do */
+        
+        height: auto !important;         /* Hủy chiều cao cố định để không sinh cuộn dọc */
+        overflow: visible !important;    /* ➔ THÊM DÒNG NÀY: Cho phép nội dung hiển thị tự do, triệt tiêu thanh cuộn ngoài */
     }
 
     /* 3. Ép khung xem trước bên trái mở rộng 100% màn hình dọc */
-    .col-left {
+     .col-left {
         width: 100% !important;
+        height: auto !important;         /* Cho phép tự co giãn theo nội dung chữ */
         padding: 15px !important;
-        border-right: none !important; /* Xóa vạch chia giữa cũ */
-        border-bottom: 2px solid #eee; /* Tạo vạch chia đáy mới */
+        border-right: none !important;
+        border-bottom: 1px solid #ddd;
     }
 
     /* 4. Hạ bớt chiều cao vùng ảnh lớn cho cân đối với màn hình dọc */
     .img-wrap {
-        height: 200px !important;
+        height: 220px !important;
     }
 
     /* 5. Ép danh sách tin bài bên phải mở rộng 100% và khống chế vùng cuộn dọc */
-    .col-right {
+      .col-right {
         width: 100% !important;
-        height: 300px !important; /* Giới hạn vùng danh sách vừa vặn trên điện thoại */
-        overflow-y: auto !important;
+        
+        /* Cài đặt không gian vuốt lướt tin tức vừa vặn ngón tay trên di động */
+        height: 250px !important;        /* Chiều cao của riêng vùng danh sách bài viết */
+        overflow-y: auto !important;     /* ➔ GIỮ NGUYÊN dòng này để làm thanh cuộn duy nhất */
+        
+        background: #ffffff !important;
     }
 
     /* Tối ưu các nút tab tiêu đề trên điện thoại cho khỏi tràn hàng */
@@ -334,105 +346,140 @@ var DATA_1 = [
     date: "23/09/2026" },
 ]; 
 var DATA_2 = [
-    { title: "Suy Niệm 14 Chặng Đàng Thánh Giá | Năm Thánh 2025", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Bảy 03-10-2026 tuần 26 thường niên", 
+    img: "https://giaoxuhongan.com/files/assets/hinh_suy_niem/suy_niem_loi_chua_thu_7.png", 
     url: "https://giaoxuhongan.com", 
-    date: "23/04/2025" },
+    date: "03/10/2026" },
 
-    { title: "Giáo xứ Hồng Ân: 14 chặng đàng Thánh giá - 07/04/2023",
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Sáu 02-10-2026 tuần 26 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/379/jpg/suy-niem-thu-sau-02-10-2026-tuan-26-thuong-nien.jpg", 
     url: "https://giaoxuhongan.com", 
-    date: "07/04/2023" },
+    date: "02/10/2026" },
 
-    { title: "Thánh Lễ Truyền Chức Linh Mục Giáo Phận Xuân Lộc Năm 2026", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Năm 01-10-2026 tuần 26 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/378/png/suy-niem-thu-nam-01-10-2026-tuan-26-thuong-nien.png", 
     url: "https://giaoxuhongan.com", 
-    date: "10/09/2026" },
+    date: "01/10/2026" },
 
-    { title: "Thánh lễ Tạ ơn Tân linh mục - tại Giáo xứ Hồng Ân - 14/8/2026", 
-    img: "https://ibb.co", 
-    url: "https://giaoxuhongan.com",
-     date: "30/08/2026" },
-
-    { title: "Thánh Lễ Tạ Ơn Của 2 Tân Linh Mục tại Gx. Gia Vinh", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Tư 30-09-2025 tuần 26 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/377/png/suy-niem-thu-tu-30-09-2026-tuan-26-thuong-nien.png", 
     url: "https://giaoxuhongan.com", 
-    date: "30/08/2026" },
+    date: "30/09/2026" },
 
-    { title: "Thánh Lễ Truyền Chức Linh Mục Giáo Phận Xuân Lộc Năm 2026", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Ba 29-09-2026 tuần 26 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/376/jpg/suy-niem-thu-ba-29-09-2026-tuan-26-thuong-nien.jpg", 
     url: "https://giaoxuhongan.com", 
-    date: "10/09/2026" },
+    date: "29/09/2026" },
 
-    { title: "Thánh lễ Tạ ơn Tân linh mục - tại Giáo xứ Hồng Ân - 14/8/2026", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Hai 28-09-2026 tuần 26thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/375/png/suy-niem-thu-hai-28-09-2026-tuan-26-thuong-nien.png", 
     url: "https://giaoxuhongan.com", 
-    date: "30/08/2026" },
+    date: "28/09/2026" },
 
-    { title: "Thánh Lễ Tạ Ơn Của 2 Tân Linh Mục tại Gx. Gia Vinh", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Chúa Nhật 27-09-2026 tuần 26 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/349/png/suy-niem-chua-nhat-27-09-2026-tuan-26-thuong-nien.png", 
     url: "https://giaoxuhongan.com", 
-    date: "30/08/2026" },
+    date: "27/09/2026" },
 
-    { title: "Thánh Lễ Truyền Chức Linh Mục Giáo Phận Xuân Lộc Năm 2026", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Bảy 26-09-2026 tuần 25 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/348/jpg/suy-niem-thu-bay-26-09-2026-tuan-25-thuong-nien.jpg", 
     url: "https://giaoxuhongan.com", 
-    date: "10/09/2026" },
+    date: "26/09/2026" },
 
-    { title: "Thánh lễ Tạ ơn Tân linh mục - tại Giáo xứ Hồng Ân - 14/8/2026", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Sáu 25-09-2026 tuần 25 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/348/jpg/suy-niem-thu-bay-26-09-2026-tuan-25-thuong-nien.jpg", 
     url: "https://giaoxuhongan.com", 
-    date: "30/08/2026" },
+    date: "25/09/2026" },
 
-    { title: "Thánh Lễ Tạ Ơn Của 2 Tân Linh Mục tại Gx. Gia Vinh", 
-    img: "https://ibb.co", 
+    { title: "Suy niệm Thứ Năm 24-09-2026 tuần 25 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/348/jpg/suy-niem-thu-bay-26-09-2026-tuan-25-thuong-nien.jpg", 
     url: "https://giaoxuhongan.com", 
-    date: "30/08/2026" }
+    date: "24/09/2026" },
+
+    { title: "Suy niệm Thứ Tư 23-09-2026 tuần 25 thường niên", 
+    img: "https://giaoxuhongan.com/files/tin/348/jpg/suy-niem-thu-bay-26-09-2026-tuan-25-thuong-nien.jpg", 
+    url: "https://giaoxuhongan.com", 
+    date: "23/09/2026" },
 ]; 
 
 
 var currentUrl = ""; 
 
+// 1. HÀM TẠO DANH SÁCH BÀI VIẾT (XÓA BỎ CHỮ ACTIVE TỰ ĐỘNG TRONG VÒNG LẶP)
 function render(data) {
-    var zone = document.getElementById("list-zone"); var html = ""; window.activeData = data; 
+    var zone = document.getElementById("list-zone"); 
+    var html = ""; 
+    window.activeData = data; 
+    
     for (var i = 0; i < data.length; i++) {
-        var activeClass = (i === 0) ? "row-news active" : "row-news";
-        var imgHtml = data[i].img ? '<img src="' + data[i].img + '" class="img-thumb">' : '';
-        html += '<div class="' + activeClass + '" onclick="changeNews(' + i + ', this)">' +
+        // Mặc định tất cả dòng tin ban đầu đều là chữ thường, không tự ý chèn chữ active nữa
+        var imgHtml = (data[i].img && !data[i].img.includes("ibb.co")) ? '<img src="' + data[i].img + '" class="img-thumb">' : '';
+        html += '<div class="row-news" onclick="changeNews(' + i + ', this)">' +
                 '<div class="thumb-wrap">' + imgHtml + '</div>' +
                 '<div class="txt-wrap"><div class="r-title">' + data[i].title + '</div><div class="r-date">📅 ' + data[i].date + '</div></div>' +
                 '</div>';
     }
     zone.innerHTML = html;
-    if (data.length > 0) { changeNews(0, document.getElementsByClassName("row-news")[0]); }
+    
+    // Nạp nội dung bài đầu tiên lên ô bên trái một cách an toàn khi khởi động
+    if (data.length > 0) { 
+        var rows = zone.getElementsByClassName("row-news");
+        if (rows.length > 0) {
+            rows[0].classList.add("active"); // Chỉ tô màu xanh cho dòng 1 chứ không kích hoạt click
+            napDuLieuXemTruoc(0); // Nạp chữ và ảnh sang trái
+        }
+    }
 }
 
+// 2. HÀM XỬ LÝ KHI NGƯỜI DÙNG TỰ TAY CLICK CHUỘT LÊN DÒNG TIN
 function changeNews(idx, element) {
+    // Nếu dòng này ĐÃ ĐANG ĐƯỢC CHỌN (có chữ active) -> Người dùng click lần 2 -> CHUYỂN TRANG
+    if (element && element.classList.contains("active")) {
+        goToLink();
+        return;
+    }
+
+    // Nếu click dòng khác -> Xóa active cũ, tô màu xanh active cho dòng mới
     var rows = document.getElementsByClassName("row-news");
     for (var j = 0; j < rows.length; j++) { rows[j].classList.remove("active"); }
-    if(element) element.classList.add("active");
+    if (element) element.classList.add("active");
+    
+    // Nạp nội dung sang ô xem trước bên trái
+    napDuLieuXemTruoc(idx);
+}
+
+// HÀM PHỤ HỖ TRỢ NẠP CHỮ VÀ ẢNH SANG Ô TRÁI
+function napDuLieuXemTruoc(idx) {
     var currentData = window.activeData[idx];
     document.getElementById("p-title").innerHTML = currentData.title;
     document.getElementById("p-desc").innerHTML = "📅 " + currentData.date;
+    
     var pImg = document.getElementById("p-img");
-    if (currentData.img) { pImg.src = currentData.img; pImg.style.display = "block"; } else { pImg.style.display = "none"; }
+    if (currentData.img && !currentData.img.includes("ibb.co")) { 
+        pImg.src = currentData.img; 
+        pImg.style.display = "block"; 
+    } else { 
+        pImg.src = "";
+        pImg.style.display = "none"; 
+    }
     currentUrl = currentData.url;
 }
 
 function goToLink() { if (currentUrl && currentUrl !== "#") { window.parent.location.href = currentUrl; } }
 
+// KHỞI ĐỘNG MẶC ĐỊNH
 render(DATA_1);
+
 document.getElementById("tab1").onclick = function() { selectTab("tab1", DATA_1); };
 document.getElementById("tab2").onclick = function() { selectTab("tab2", DATA_2); };
-document.getElementById("tab3").onclick = function() { selectTab("tab3", DATA_3); };
-document.getElementById("tab4").onclick = function() { selectTab("tab4", DATA_4); };
 
 function selectTab(tabId, data) {
     var tabs = document.getElementsByClassName("t-btn");
     for (var i = 0; i < tabs.length; i++) { tabs[i].classList.remove("active"); }
-    document.getElementById(tabId).classList.add("active"); render(data);
+    document.getElementById(tabId).classList.add("active"); 
+    render(data); // Tải danh sách mới của tab đó
 }
+
 </script>
 </body>
 </html>
-

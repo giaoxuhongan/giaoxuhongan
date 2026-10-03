@@ -10,9 +10,10 @@
 </head>
 <body>
 
-         <!---------------------------- KHOI: THANH MENU NGANG -------------------------->
+    <!---------------------------- KHOI: THANH MENU NGANG -------------------------->
 
-    <nav class="navbar">
+        
+        <nav class="navbar navbar-pc">
         <ul>
             <li><a href="index.html" >⛪   Trang Chủ</a></li>
             <li><a href="gioithieu.html">Giới Thiệu</a></li>
@@ -48,16 +49,38 @@
                     </li>
 
             <li><a href="lienhe.html">Liên Hệ</a></li>
+     </ul>
+      </nav>
+
+<!-- BẢN MENU THU GỌN DÀNH CHO ĐIỆN THOẠI MỚI -->
+    <nav class="navbar-mobile">
+    <a href="index.html">⛪ Trang Chủ</a>
+    <a href="loichua.html">📖 Lời Chúa</a>
+    <a href="tintuc.html">📖 Tin Tức</a>
+    <a href="lienhe.html">📞 Liên Hệ</a>
     </ul>
     </nav>
 
+   
 
+    <!------------------------KHOI ANH BANNER CHINH ------------------------------->
 
-    <!------------------------KHỐI BANNER ẢNH NÀY ------------------------------->
+    <div class="banner-pc">
+        <div class="banner-container">
+   
+    <img src="anh/banner.png" alt="Banner Máy Tính">
+   </div> 
+   </div>
+    <!-- BANNER ĐIỆN THOẠI MỚI (Dùng một tấm ảnh đứng hoặc ảnh cắt gọn riêng cho di động) -->
+ <div class="banner-mobile">
+    <img src="anh/banner-mobile.png" alt="Banner Điện Thoại">
+</div>
+    
+    <!-------------------------- gach duoi banner chinh -------------------------->
+     <div class="cum-gach-ngang-duoi-banner">
+    <h2 style="text-align: left; color: #d0d0d0; font-size: 18px;"></h2>
+</div>
 
-    <div class="banner-container">
-        <img src="anh/banner.png" alt="Banner Giáo Xứ Hồng Ân">
-    </div>
     <!-- KHỐI TIÊU ĐỀ DANH MỤC CÓ ĐƯỜNG GẠCH DÀI -->
 <div class="cum-tieu-de-danh-muc">
     
@@ -81,7 +104,7 @@
         <!-- 2. BÊN PHẢI: KHỐI CHỨA BOX DANH SÁCH TÊN (CHIẾM 60% ĐỘ RỘNG) -->
         <div style="flex: 60; min-width: 550px;">
             <!-- Giữ nguyên iframe gọi file 1hdagioan.html của bạn -->
-            <iframe src="3abdhmlt.html" style="width: 100%; height: 288px; border: none; overflow: hidden;"></iframe>
+            <iframe src="abdhmlt.html" style="width: 100%; height: 288px; border: none; overflow: hidden;"></iframe>
         </div>
   
         </div>
@@ -89,14 +112,7 @@
 <!---------------------------BÀI VIẾT DƯỚI CÙNG----------------------------->
 
     <div class="container" style="max-width: 1200px; width: 100%;">
-        <section>
-            <h2>Chào mừng bạn!</h2>
-            <p>Tôi vừa nâng cấp thành công thanh menu ngang cho trang web này bằng việc sử dụng kỹ thuật <strong>Flexbox trong CSS</strong>. Thanh menu này sẽ luôn cố định ở trên cùng ngay cả khi bạn cuộn trang xuống dưới.</p>
-        </section>
-        
-        <section style="height: 400px; margin-top: 20px;">
-            <p>*(Đoạn văn này được làm dài ra để bạn thử cuộn chuột và xem thanh menu hoạt động cố định ở trên đỉnh màn hình)*</p>
-        </section>
+  
         </div>
         </div>
 <!-------------------------- THÀNH PHẦN MỚI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
