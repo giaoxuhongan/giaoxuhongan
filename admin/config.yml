@@ -1,0 +1,23 @@
+# CẤU HÌNH KẾT NỐI TRANG QUẢN TRỊ VỚI KHO CODE GITHUB CỦA BẠN
+backend:
+  name: github
+  repo: giaoxuhongan/giaoxuhongan # Gõ đúng tên tài khoản và tên kho của bạn
+  branch: main # Tên nhánh chạy online của bạn
+
+# NƠI LƯU TRỮ HÌNH ẢNH KHI BẠN BẤM TẢI ẢNH LÊN TỪ TRANG QUẢN TRỊ
+media_folder: "anh"
+public_folder: "anh"
+
+# CẤU HÌNH Ô NHẬP LIỆU CHO CÁC THỂ LOẠI BÀI VIẾT
+collections:
+  - name: "loichua"
+    label: "Lời Chúa Mỗi Ngày"
+    folder: "loichuamoingay" # Hệ thống sẽ tự tạo thư mục này để chứa các file bài viết mới
+    create: true # Cho phép bấm nút "Thêm bài viết mới"
+    slug: "{{year}}-{{month}}-{{day}}-loi-chua" # Tự động đặt tên file theo ngày đăng
+    fields:
+      - { label: "Tiêu đề bài viết", name: "title", widget: "string" }
+      - { label: "Ngày đăng bài", name: "date", widget: "datetime", format: "DD/MM/YYYY" }
+      - { label: "Hình ảnh chủ đề", name: "image", widget: "image", required: false }
+      - { label: "Câu tóm tắt Lời Chúa", name: "summary", widget: "string" }
+      - { label: "Nội dung bài viết", name: "body", widget: "markdown" } # Ô soạn thảo văn bản lớn
