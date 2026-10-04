@@ -7,6 +7,9 @@ backend:
   client_id: "Ov23liE7fHvCIY8ALiof"
   client_secret: "fbb93dbe54850d2a0eab96c23a8052ac0018e7db"
 
+   base_url: https://netlify.com
+  auth_endpoint: /aut
+
 media_folder: "anh"
 public_folder: "anh"
 
