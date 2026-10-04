@@ -1,9 +1,7 @@
 backend:
   name: github
-  repo: giaoxuhongan/giaoxuhongan # Tên tài khoản và tên kho của bạn
+  repo: giaoxuhongan/giaoxuhongan
   branch: main
-  
-  # 👑 BỘ ĐÔI CHÌA KHÓA BẢO MẬT ĐÃ ĐỒNG BỘ 100%
   client_id: "Ov23liE7fHvCIY8ALiof"
   client_secret: "fbb93dbe54850d2a0eab96c23a8052ac0018e7db"
 
@@ -13,12 +11,13 @@ public_folder: "anh"
 collections:
   - name: "loichua"
     label: "Lời Chúa Mỗi Ngày"
-    folder: "loichuamoingay" # Hệ thống sẽ tự tạo thư mục này để chứa các file bài viết mới
-    create: true # Cho phép bấm nút "Thêm bài viết mới"
-    slug: "{{year}}-{{month}}-{{day}}-loi-chua" # Tự động đặt tên file theo ngày đăng
+    folder: "loichuamoingay"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-loi-chua"
     fields:
       - { label: "Tiêu đề bài viết", name: "title", widget: "string" }
       - { label: "Ngày đăng bài", name: "date", widget: "datetime", format: "DD/MM/YYYY" }
       - { label: "Hình ảnh chủ đề", name: "image", widget: "image", required: false }
       - { label: "Câu tóm tắt Lời Chúa", name: "summary", widget: "string" }
-      - { label: "Nội dung bài viết", name: "body", widget: "markdown" } # Ô soạn thảo văn bản lớn
+      - { label: "Nội dung bài viết", name: "body", widget: "markdown" }
+
