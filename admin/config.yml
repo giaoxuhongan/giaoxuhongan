@@ -1,11 +1,8 @@
-backend:
+# CẤU HÌNH KẾT NỐI KHÔNG GIAN BẢO MẬT NỘI BỘ
 backend:
   name: github
   repo: giaoxuhongan/giaoxuhongan
   branch: main
-  # 👑 ĐÃ BỔ SUNG CỔNG BẢO MẬT TRUNG GIAN NETLIFY MIỄN PHÍ
-  base_url: https://netlify.com
-  auth_endpoint: /auth
 
 media_folder: "anh"
 public_folder: "anh"
@@ -22,5 +19,3 @@ collections:
       - { label: "Hình ảnh chủ đề", name: "image", widget: "image", required: false }
       - { label: "Câu tóm tắt Lời Chúa", name: "summary", widget: "string" }
       - { label: "Nội dung bài viết", name: "body", widget: "markdown" }
-
-
