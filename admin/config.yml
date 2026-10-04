@@ -1,14 +1,15 @@
-# CẤU HÌNH KẾT NỐI TRANG QUẢN TRỊ VỚI KHO CODE GITHUB CỦA BẠN
 backend:
   name: github
-  repo: giaoxuhongan/giaoxuhongan # Gõ đúng tên tài khoản và tên kho của bạn
-  branch: main # Tên nhánh chạy online của bạn
+  repo: giaoxuhongan/giaoxuhongan # Tên tài khoản và tên kho của bạn
+  branch: main
+  
+  # 👑 BỘ ĐÔI CHÌA KHÓA BẢO MẬT ĐÃ ĐỒNG BỘ 100%
+  client_id: "Ov23liE7fHvCIY8ALiof"
+  client_secret: "fbb93dbe54850d2a0eab96c23a8052ac0018e7db"
 
-# NƠI LƯU TRỮ HÌNH ẢNH KHI BẠN BẤM TẢI ẢNH LÊN TỪ TRANG QUẢN TRỊ
 media_folder: "anh"
 public_folder: "anh"
 
-# CẤU HÌNH Ô NHẬP LIỆU CHO CÁC THỂ LOẠI BÀI VIẾT
 collections:
   - name: "loichua"
     label: "Lời Chúa Mỗi Ngày"
