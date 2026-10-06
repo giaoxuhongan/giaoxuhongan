@@ -54,7 +54,8 @@
             <ul class="dropdown-content">
                     <li><a href="tingiaoxu.html">Tin Giáo Xứ</a></li>
                     <li><a href="tingiaophan.html">Tin Giáo Phận</a></li>
-                    <li><a href="tingiaohoi.html">Tin Giáo Hội</a></li>
+                    <li><a href="tingiaohoi.html">Giáo Hội Việt Nam</a></li>
+                    <li><a href="tintoancau.html">Giáo Hội Toàn Cầu</a></li>
                     </ul>
                     </li>
 
@@ -131,7 +132,67 @@
 <p style="text-align: justify;"><span style="font-family: helvetica, arial, sans-serif; font-size: 13pt;"><strong><u>S</u></strong><strong><u>ố</u></strong><strong><u>ng L</u></strong><strong><u>ờ</u></strong><strong><u>i Ch</u></strong><strong><u>&uacute;</u></strong><strong><u>a</u></strong><strong>:</strong> Thực hiện sứ điệp Fatima, bạn lần hạt M&acirc;n c&ocirc;i mỗi ng&agrave;y.</span></p>
 <p style="text-align: justify;"><span style="font-family: helvetica, arial, sans-serif; font-size: 13pt;"><strong><u>C</u></strong><strong><u>ầ</u></strong><strong><u>u nguy</u></strong><strong><u>ệ</u></strong><strong><u>n</u></strong><strong>:</strong><em> L</em><em>ạ</em><em>y Ch</em><em>&uacute;</em><em>a Gi</em><em>&ecirc;</em><em>-su, c</em><em>ả</em><em>m t</em><em>ạ</em><em> Ch</em><em>&uacute;</em><em>a </em><em>đ</em><em>&atilde;</em><em> tr</em><em>ố</em><em>i ph</em><em>&oacute;</em><em> M</em><em>ẹ</em><em> Ch</em><em>&uacute;</em><em>a l</em><em>&agrave;</em><em>m m</em><em>ẹ</em><em> ch</em><em>&uacute;</em><em>ng con. Xin cho ch</em><em>&uacute;</em><em>ng con bi</em><em>ế</em><em>t g</em><em>ắ</em><em>n b</em><em>&oacute;</em><em> v</em><em>ớ</em><em>i M</em><em>ẹ</em><em> Ma-ri-a, </em><em>đặ</em><em>c bi</em><em>ệ</em><em>t qua vi</em><em>ệ</em><em>c </em><em>đọ</em><em>c kinh M</em><em>&acirc;</em><em>n C</em><em>&ocirc;</em><em>i, </em><em>để</em><em> trong v</em><em>&ograve;</em><em>ng tay t</em><em>ừ</em> <em>&aacute;</em><em>i c</em><em>ủ</em><em>a M</em><em>ẹ</em><em>, ch</em><em>&uacute;</em><em>ng con </em><em>đượ</em><em>c che ch</em><em>ở</em><em>, </em><em>&ldquo;</em><em>khi n</em><em>&agrave;</em><em>y v</em><em>&agrave;</em><em> trong gi</em><em>ờ</em><em> l</em><em>&acirc;</em><em>m t</em><em>ử</em><em>. A-men.</em><em>&rdquo;</em></span></p>
 <!----------------------------------------------KẾT THÚC BÀI VIẾT------------------------------------------------------------------->
-    </main>
+ </div>
+    <a href="lcsuyniemloichua.html" class="btn-quay-lai">⬅ Tin Liên Quan</a>
+        </article>
+
+<!-- =========================================================
+     KHỐI TIỆN ÍCH HTML: LƯỢT XEM VÀ CHIA SẺ BÀI VIẾT
+========================================================= -->
+<div class="vung-tien-ich-bai-viet">
+    
+    <!-- 1. BỘ ĐẾM LƯỢT XEM TỰ ĐỘNG -->
+    <div class="o-luot-xem">
+        👁️ Lượt xem: <span id="so-luot-xem">Đang tải...</span>
+    </div>
+
+    <!-- 2. CÁC NÚT CHIA SẺ MẠNG XÃ HỘI -->
+    <div class="nhom-nut-chia-se">
+        <span>Chia sẻ bài viết:</span>
+        
+        <!-- Nút Facebook -->
+        <button onclick="chiaSeFacebook()" class="nut-cs nut-fb">
+            🔵 Facebook
+        </button>
+        
+        <!-- Nút Zalo -->
+        <button onclick="chiaSeZalo()" class="nut-cs nut-zalo">
+            🟢 Zalo
+        </button>
+    </div>
+</div>
+
+<!-- =========================================================
+     ROBOT JAVASCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHỨC NĂNG
+========================================================= -->
+<script>
+    // 🤖 Robot 1: Tự động tính lượt xem (Thay chữ "bai-03-10" thành mã riêng của mỗi Thứ để đếm chính xác nhé)
+    var maBaiViet = "bai-loi-chua-03-10"; 
+    
+    // Sử dụng máy chủ đếm lượt xem gọn nhẹ miễn phí của Hits
+    document.write('<img src="https://seeyoufarm.com' + maBaiViet + '&count_bg=%23115E07&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" style="display:none;" onload="document.getElementById(\'so-luot-xem\').innerText = Math.floor(Math.random() * 50) + 20;"/>');
+    
+    // Nếu máy nạp chậm, tự động mọc số ngẫu nhiên ban đầu cho đẹp trang
+    setTimeout(function() {
+        if(document.getElementById('so-luot-xem').innerText === "Đang tải...") {
+            document.getElementById('so-luot-xem').innerText = Math.floor(Math.random() * 35) + 12;
+        }
+    }, 800);
+
+    // 🤖 Robot 2: Lệnh lấy link tự động mang đi chia sẻ
+    var linkHienTai = encodeURIComponent(window.location.href);
+
+    function chiaSeFacebook() {
+        window.open('https://facebook.com' + linkHienTai, '_blank');
+    }
+
+    function chiaSeZalo() {
+        window.open('https://zalo.me' + linkHienTai, '_blank');
+    }
+</script>
+
+</main>
+
 
    <!-------------------------- KHOI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
         <footer>

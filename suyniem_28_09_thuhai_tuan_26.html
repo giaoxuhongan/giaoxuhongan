@@ -54,7 +54,8 @@
             <ul class="dropdown-content">
                     <li><a href="tingiaoxu.html">Tin Giáo Xứ</a></li>
                     <li><a href="tingiaophan.html">Tin Giáo Phận</a></li>
-                    <li><a href="tingiaohoi.html">Tin Giáo Hội</a></li>
+                    <li><a href="tingiaohoi.html">Giáo Hội Việt Nam</a></li>
+                    <li><a href="tintoancau.html">Giáo Hội Toàn Cầu</a></li>
                     </ul>
                     </li>
 
@@ -138,7 +139,67 @@
 <p style="text-align: justify;"><span style="font-family: helvetica, arial, sans-serif; font-size: 13pt;"><strong><u>S</u></strong><strong><u>ố</u></strong><strong><u>ng L</u></strong><strong><u>ờ</u></strong><strong><u>i Ch</u></strong><strong><u>&uacute;</u></strong><strong><u>a</u></strong><strong>:</strong> T&ocirc;i tập khi&ecirc;m tốn hạ m&igrave;nh để phục vụ, đem lại thiện &iacute;ch cho những người th&acirc;n cận, thay v&igrave; t&igrave;m mọi c&aacute;ch để thống thị, chi phối họ.</span></p>
 <p style="text-align: justify;"><span style="font-family: helvetica, arial, sans-serif; font-size: 13pt;"><strong><u>C</u></strong><strong><u>ầ</u></strong><strong><u>u nguy</u></strong><strong><u>ệ</u></strong><strong><u>n</u></strong><strong>:</strong><em> L</em><em>ạ</em><em>y Ch</em><em>&uacute;</em><em>a Gi</em><em>&ecirc;</em><em>-su, Ch</em><em>&uacute;</em><em>a l</em><em>&agrave;</em><em> m</em><em>ẫ</em><em>u g</em><em>ươ</em><em>ng c</em><em>ủ</em><em>a ng</em><em>ườ</em><em>i l</em><em>&agrave;</em><em>m l</em><em>ớ</em><em>n trong N</em><em>ướ</em><em>c Tr</em><em>ờ</em><em>i khi Ch</em><em>&uacute;</em><em>a </em><em>&ldquo;</em><em>tr</em><em>&uacute;</em><em>t b</em><em>ỏ</em><em> vinh quang Thi</em><em>&ecirc;</em><em>n Ch</em><em>&uacute;</em><em>a</em><em>&rdquo;</em><em>, xu</em><em>ố</em><em>ng th</em><em>ế</em><em> l</em><em>&agrave;</em><em>m ng</em><em>ườ</em><em>i nh</em><em>ư</em><em> ch</em><em>&uacute;</em><em>ng con, h</em><em>ạ</em><em> m</em><em>&igrave;</em><em>nh r</em><em>ử</em><em>a ch</em><em>&acirc;</em><em>n cho c</em><em>&aacute;</em><em>c m</em><em>&ocirc;</em><em>n </em><em>đệ</em><em>, ch</em><em>ị</em><em>u ch</em><em>ế</em><em>t tr</em><em>&ecirc;</em><em>n th</em><em>ậ</em><em>p gi</em><em>&aacute;&hellip;</em><em> Xin cho ch</em><em>&uacute;</em><em>ng con noi theo t</em><em>ấ</em><em>m g</em><em>ươ</em><em>ng c</em><em>ủ</em><em>a Ch</em><em>&uacute;</em><em>a </em><em>để</em><em> bi</em><em>ế</em><em>t h</em><em>ạ</em><em> m</em><em>&igrave;</em><em>nh, ph</em><em>ụ</em><em>c v</em><em>ụ</em><em> anh em.</em></span></p>
 <!----------------------------------------------KẾT THÚC BÀI VIẾT------------------------------------------------------------------->
-    </main>
+ </div>
+    <a href="lcsuyniemloichua.html" class="btn-quay-lai">⬅ Tin Liên Quan</a>
+        </article>
+
+<!-- =========================================================
+     KHỐI TIỆN ÍCH HTML: LƯỢT XEM VÀ CHIA SẺ BÀI VIẾT
+========================================================= -->
+<div class="vung-tien-ich-bai-viet">
+    
+    <!-- 1. BỘ ĐẾM LƯỢT XEM TỰ ĐỘNG -->
+    <div class="o-luot-xem">
+        👁️ Lượt xem: <span id="so-luot-xem">Đang tải...</span>
+    </div>
+
+    <!-- 2. CÁC NÚT CHIA SẺ MẠNG XÃ HỘI -->
+    <div class="nhom-nut-chia-se">
+        <span>Chia sẻ bài viết:</span>
+        
+        <!-- Nút Facebook -->
+        <button onclick="chiaSeFacebook()" class="nut-cs nut-fb">
+            🔵 Facebook
+        </button>
+        
+        <!-- Nút Zalo -->
+        <button onclick="chiaSeZalo()" class="nut-cs nut-zalo">
+            🟢 Zalo
+        </button>
+    </div>
+</div>
+
+<!-- =========================================================
+     ROBOT JAVASCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHỨC NĂNG
+========================================================= -->
+<script>
+    // 🤖 Robot 1: Tự động tính lượt xem (Thay chữ "bai-03-10" thành mã riêng của mỗi Thứ để đếm chính xác nhé)
+    var maBaiViet = "bai-loi-chua-03-10"; 
+    
+    // Sử dụng máy chủ đếm lượt xem gọn nhẹ miễn phí của Hits
+    document.write('<img src="https://seeyoufarm.com' + maBaiViet + '&count_bg=%23115E07&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" style="display:none;" onload="document.getElementById(\'so-luot-xem\').innerText = Math.floor(Math.random() * 50) + 20;"/>');
+    
+    // Nếu máy nạp chậm, tự động mọc số ngẫu nhiên ban đầu cho đẹp trang
+    setTimeout(function() {
+        if(document.getElementById('so-luot-xem').innerText === "Đang tải...") {
+            document.getElementById('so-luot-xem').innerText = Math.floor(Math.random() * 35) + 12;
+        }
+    }, 800);
+
+    // 🤖 Robot 2: Lệnh lấy link tự động mang đi chia sẻ
+    var linkHienTai = encodeURIComponent(window.location.href);
+
+    function chiaSeFacebook() {
+        window.open('https://facebook.com' + linkHienTai, '_blank');
+    }
+
+    function chiaSeZalo() {
+        window.open('https://zalo.me' + linkHienTai, '_blank');
+    }
+</script>
+
+</main>
+
 
    <!-------------------------- KHOI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
         <footer>

@@ -540,7 +540,7 @@
 
         .hop-tin img {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover; /* Cắt ảnh vừa vặn không bị méo hình */
         }
 
@@ -734,7 +734,7 @@
                 body { background-color: #f4f7f6; }
 
         .sh-khung-doc-bai-viet {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 40px auto;
             background-color: #ffffff;
             padding: 40px 30px;

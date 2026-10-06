@@ -29,12 +29,12 @@
      KHỐI 2: NHÚNG VIDEO YOUTUBE XEM NGAY TẠI CHỖ
      ========================================================= -->
 <div class="hop-box-doc-lap">
-    <div class="tieu-de-hop-box">🎬 VIDEO PHỤNG VỤ / THÁNH CA</div>
+    <div class="tieu-de-hop-box">🎬 VIDEO SUY NIỆM HÀNG TUẦN</div>
     <div class="vung-nhung-video">
         
         <!-- ➔ VỊ TRÍ NHÚNG VIDEO: Bạn dán nguyên thẻ iframe của Youtube vào đây -->
         <!-- Bạn chỉ cần thay mã vXb1_S7pYh8 thành mã video thật của bạn là chạy -->
-        <iframe src="https://youtube.com/embed/SnFo0sv2U8c" 
+        <iframe src="https://youtube.com/embed/1rsQcWwT-BQ" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -49,7 +49,7 @@
         <!-- ➔ VỊ TRÍ NHÚNG VIDEO: Bạn dán nguyên thẻ iframe của Youtube vào đây -->
         <!-- Bạn chỉ cần thay mã vXb1_S7pYh8 thành mã video thật của bạn là chạy -->
         <!-- BẠN COPY NGUYÊN VĂN DÒNG CHUẨN NÀY DÁN THAY THẾ CHO DÒNG CŨ -->
-<iframe src="https://www.youtube.com/embed/DSThCVcJ3Bc" 
+<iframe src="https://www.youtube.com/embed/Jg1oPNbBopU" 
         title="Kinh Hòa Bình - YouTube Video Player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -147,14 +147,27 @@
         box-shadow: 0 2px 5px rgba(0,0,0,0.03);
     }
     
-    .tieu-de-hop-box {
-        background: #115e07; /* Màu xanh lá đậm của bạn */
-        color: #ffffff;
-        padding: 8px 12px;
-        font-weight: bold;
-        font-size: 13.5px;
-        text-transform: uppercase;
-    }
+   /* 1. ĐẶT DÒNG GỌI FONT NÀY LÊN TRÊN CÙNG TRONG THẺ <style> CỦA BẠN (Dòng đầu tiên) */
+@import url('https://googleapis.com');
+
+/* 2. SỬA LẠI LỚP ĐỊNH DẠNG TIÊU ĐỀ HỘP BOX */
+.tieu-de-hop-box {
+    background: #115e07; /* Màu xanh lá đậm của bạn */
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px; /* Tạo độ thưa nhẹ giữa các chữ cho thoáng */
+
+    /* 👑 CHỌN 1 TRONG 3 KIỂU FONT DƯỚI ĐÂY (Hãy xóa dấu /* của font bạn thích nhé): */
+    
+    font-family: 'Be Vietnam Pro', sans-serif; /* Kiểu 1: Hiện đại, rõ nét */
+    /* font-family: 'Playfair Display', serif;   Kiểu 2: Cổ điển, trang nghiêm */
+    /* font-family: 'Montserrat', sans-serif;      Kiểu 3: Uy nghi, bề thế */
+
+    font-weight: 700; /* Ép chữ đậm lên hẳn */
+}
+
 
     /* VÙNG CHỨA BANNER LIÊN KẾT FULL KHUNG KHÔNG CHỮ */
     .vung-anh-full-khung {

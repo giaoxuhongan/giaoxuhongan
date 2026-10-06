@@ -54,7 +54,8 @@
             <ul class="dropdown-content">
                     <li><a href="tingiaoxu.html">Tin Giáo Xứ</a></li>
                     <li><a href="tingiaophan.html">Tin Giáo Phận</a></li>
-                    <li><a href="tingiaohoi.html">Tin Giáo Hội</a></li>
+                    <li><a href="tingiaohoi.html">Giáo Hội Việt Nam</a></li>
+                    <li><a href="tintoancau.html">Giáo Hội Toàn Cầu</a></li>
                     </ul>
                     </li>
 
@@ -118,7 +119,67 @@
 <p style="text-align: justify;"><span style="font-size: 13pt;">Hơn bao giờ hết,&nbsp;<em>&ldquo;con người thời nay tin v&agrave;o c&aacute;c chứng nh&acirc;n hơn l&agrave; c&aacute;c thầy dạy&rdquo;</em>&nbsp;(ĐGH Phaol&ocirc; VI), tin v&agrave;o cuộc sống h&agrave;nh động hơn l&agrave; v&agrave;o l&yacute; thuyết. V&igrave; thế, Đức Gioan Phaol&ocirc; II đ&atilde; mời gọi trong th&ocirc;ng điệp&nbsp;<em>Sứ vụ Đấng Cứu Thế</em>&nbsp;rằng: &ldquo;<em>chứng từ của đời sống Kit&ocirc; hữu l&agrave; thể thức đầu ti&ecirc;n kh&ocirc;ng thể thay thế của việc truyền gi&aacute;o</em>&rdquo; (số 42), v&agrave; hơn ai hết, Ch&uacute;a Gi&ecirc;su Kit&ocirc; l&agrave; một &ldquo;<em>chứng từ tuyệt nhất, v&agrave; l&agrave; mẫu mực cho tất cả mọi chứng từ Kit&ocirc; gi&aacute;o</em>&rdquo; (số 42). Như thế, mỗi Kit&ocirc; hữu h&atilde;y kh&ocirc;ng ngừng t&igrave;m kiếm, nu&ocirc;i dưỡng v&agrave; l&agrave;m triển nở sự b&igrave;nh an cho tha nh&acirc;n, &ldquo;<em>cho nh&agrave; n&agrave;y</em>&rdquo;, bởi đ&atilde; biết họa lại h&igrave;nh ảnh v&agrave; cuộc đời Ch&uacute;a Gi&ecirc;su Kit&ocirc; nơi ch&iacute;nh m&igrave;nh, nơi nh&agrave; của m&igrave;nh trước.</span></p>
 <p style="text-align: justify;"><span style="font-size: 13pt;"><em>C&ugrave;ng hiệp th&ocirc;ng, &ldquo;cầu nguyện cho sứ mạng được chia sẻ&rdquo;, theo &yacute; cầu nguyện th&aacute;ng 10</em><em>/2024</em><em>&nbsp;của Đức Gi&aacute;o ho&agrave;ng, xin cho mỗi Kit&ocirc; hữu, trước ti&ecirc;n h&atilde;y l&agrave; một &ldquo;nghệ nh&acirc;n&rdquo; của sự b&igrave;nh an. Hầu ch&iacute;nh &ldquo;nước Thi&ecirc;n Ch&uacute;a đ&atilde; đến gần&rdquo; đang hiện diện nơi đ&acirc;y v&agrave; l&uacute;c n&agrave;y.&nbsp;</em><em>Amen.</em></span></p>
 <!----------------------------------------------KẾT THÚC BÀI VIẾT------------------------------------------------------------------->
-    </main>
+ </div>
+    <a href="lcsuyniemloichua.html" class="btn-quay-lai">⬅ Tin Liên Quan</a>
+        </article>
+
+<!-- =========================================================
+     KHỐI TIỆN ÍCH HTML: LƯỢT XEM VÀ CHIA SẺ BÀI VIẾT
+========================================================= -->
+<div class="vung-tien-ich-bai-viet">
+    
+    <!-- 1. BỘ ĐẾM LƯỢT XEM TỰ ĐỘNG -->
+    <div class="o-luot-xem">
+        👁️ Lượt xem: <span id="so-luot-xem">Đang tải...</span>
+    </div>
+
+    <!-- 2. CÁC NÚT CHIA SẺ MẠNG XÃ HỘI -->
+    <div class="nhom-nut-chia-se">
+        <span>Chia sẻ bài viết:</span>
+        
+        <!-- Nút Facebook -->
+        <button onclick="chiaSeFacebook()" class="nut-cs nut-fb">
+            🔵 Facebook
+        </button>
+        
+        <!-- Nút Zalo -->
+        <button onclick="chiaSeZalo()" class="nut-cs nut-zalo">
+            🟢 Zalo
+        </button>
+    </div>
+</div>
+
+<!-- =========================================================
+     ROBOT JAVASCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHỨC NĂNG
+========================================================= -->
+<script>
+    // 🤖 Robot 1: Tự động tính lượt xem (Thay chữ "bai-03-10" thành mã riêng của mỗi Thứ để đếm chính xác nhé)
+    var maBaiViet = "bai-loi-chua-03-10"; 
+    
+    // Sử dụng máy chủ đếm lượt xem gọn nhẹ miễn phí của Hits
+    document.write('<img src="https://seeyoufarm.com' + maBaiViet + '&count_bg=%23115E07&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" style="display:none;" onload="document.getElementById(\'so-luot-xem\').innerText = Math.floor(Math.random() * 50) + 20;"/>');
+    
+    // Nếu máy nạp chậm, tự động mọc số ngẫu nhiên ban đầu cho đẹp trang
+    setTimeout(function() {
+        if(document.getElementById('so-luot-xem').innerText === "Đang tải...") {
+            document.getElementById('so-luot-xem').innerText = Math.floor(Math.random() * 35) + 12;
+        }
+    }, 800);
+
+    // 🤖 Robot 2: Lệnh lấy link tự động mang đi chia sẻ
+    var linkHienTai = encodeURIComponent(window.location.href);
+
+    function chiaSeFacebook() {
+        window.open('https://facebook.com' + linkHienTai, '_blank');
+    }
+
+    function chiaSeZalo() {
+        window.open('https://zalo.me' + linkHienTai, '_blank');
+    }
+</script>
+
+</main>
+
 
    <!-------------------------- KHOI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
         <footer>

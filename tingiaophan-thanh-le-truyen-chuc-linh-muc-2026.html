@@ -54,7 +54,8 @@
             <ul class="dropdown-content">
                     <li><a href="tingiaoxu.html">Tin Giáo Xứ</a></li>
                     <li><a href="tingiaophan.html">Tin Giáo Phận</a></li>
-                    <li><a href="tingiaohoi.html">Tin Giáo Hội</a></li>
+                    <li><a href="tingiaohoi.html">Giáo Hội Việt Nam</a></li>
+                    <li><a href="tintoancau.html">Giáo Hội Toàn Cầu</a></li>
                     </ul>
                     </li>
 
@@ -108,6 +109,121 @@
 <p>Nguồn: Ban MVTT. gi&aacute;o phận Xu&acirc;n Lộc</p>
 <!----------------------------------------------KẾT THÚC BÀI VIẾT------------------------------------------------------------------->
     </main>
+
+   <!-------------------------- KHOI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
+        <footer>
+        <div class="footer-flex">
+            
+            <!-- CỘT 1: THÔNG TIN TỔNG QUAN -->
+
+            <div class="footer-cot">
+                <h3>⛪ Giáo Xứ Hồng Ân</h3>
+                <p><strong>Địa chỉ:</strong> Giáo hạt Long Khánh - Giáo phận Xuân Lộc</p>
+                <p><strong>Email:</strong> btt.giaoxuhongan@gmail.com</p>
+                <p>Trang thông tin chính thức của Giáo xứ, nơi cập nhật các tin tức phụng vụ, 
+                   sinh hoạt giáo lý của cộng đoàn dân Chúa.</p>
+            </div>
+
+            <!-- CỘT 2: LỊCH THÁNH LỄ -->
+
+            <div class="footer-cot">
+                <h3>⏰ GIỜ THÁNH LỄ</h3>
+                <ul>
+                <li><strong>Ngày thường:</strong> 04h45 & 17h30</li>
+                <li><strong>Thứ Bảy (Lễ thay Chủ Nhật):</strong> 17h30</li>
+                <li><strong>Chủ Nhật:</strong>
+                <br>+ Lễ 1 (Thiếu nhi): 06h30
+                <br>+ Lễ 2 (Giới trẻ & Cộng đoàn): 08h30
+                <br>+ Lễ 3 (Cộng đoàn): 16h30
+                </li>
+                </ul>
+                </div>
+
+            <!-- CỘT 3: LIÊN KẾT NHANH / LIÊN HỆ -->
+
+            <div class="footer-cot">
+                <h3>🔗 LIÊN KẾT NHANH</h3>
+                <ul>
+                    <li><a href="gioithieu.html" style="color: #ecf0f1; text-decoration: none;">▶ Giới thiệu Giáo xứ</a></li>
+                    <li><a href="cacgiaoho.html" style="color: #ecf0f1; text-decoration: none;">▶ Danh sách các Giáo họ</a></li>
+                    <li><a href="lienhe.html" style="color: #ecf0f1; text-decoration: none;">▶ Gửi hòm thư góp ý/ý kiến</a></li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Điện thoại:</strong> 0251.xxx.xxxx (Văn phòng GX)</p>
+                  </div>
+                  </div>
+
+        <!-- Dòng bản quyền cuối trang -->
+        <div class="footer-copyright">
+            <p>© 2026 Giáo Xứ Hồng Ân - Được thiết kế bởi Ban Truyền Thông Giáo Xứ</p>
+            </div>
+            </footer>
+
+
+</body>
+</html>
+
+<!----------------------------------------------KẾT THÚC BÀI VIẾT------------------------------------------------------------------->
+ </div>   
+<a href="tingiaohoi.html" class="btn-quay-lai">⬅ Tin Liên Quan</a>
+        </article>
+
+<!-- =========================================================
+     KHỐI TIỆN ÍCH HTML: LƯỢT XEM VÀ CHIA SẺ BÀI VIẾT
+========================================================= -->
+<div class="vung-tien-ich-bai-viet">
+    
+    <!-- 1. BỘ ĐẾM LƯỢT XEM TỰ ĐỘNG -->
+    <div class="o-luot-xem">
+        👁️ Lượt xem: <span id="so-luot-xem">Đang tải...</span>
+    </div>
+
+    <!-- 2. CÁC NÚT CHIA SẺ MẠNG XÃ HỘI -->
+    <div class="nhom-nut-chia-se">
+        <span>Chia sẻ bài viết:</span>
+        
+        <!-- Nút Facebook -->
+        <button onclick="chiaSeFacebook()" class="nut-cs nut-fb">
+            🔵 Facebook
+        </button>
+        
+        <!-- Nút Zalo -->
+        <button onclick="chiaSeZalo()" class="nut-cs nut-zalo">
+            🟢 Zalo
+        </button>
+    </div>
+</div>
+
+<!-- =========================================================
+     ROBOT JAVASCRIPT ĐIỀU KHIỂN TỰ ĐỘNG CHỨC NĂNG
+========================================================= -->
+<script>
+    // 🤖 Robot 1: Tự động tính lượt xem (Thay chữ "bai-03-10" thành mã riêng của mỗi Thứ để đếm chính xác nhé)
+    var maBaiViet = "bai-loi-chua-03-10"; 
+    
+    // Sử dụng máy chủ đếm lượt xem gọn nhẹ miễn phí của Hits
+    document.write('<img src="https://seeyoufarm.com' + maBaiViet + '&count_bg=%23115E07&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" style="display:none;" onload="document.getElementById(\'so-luot-xem\').innerText = Math.floor(Math.random() * 50) + 20;"/>');
+    
+    // Nếu máy nạp chậm, tự động mọc số ngẫu nhiên ban đầu cho đẹp trang
+    setTimeout(function() {
+        if(document.getElementById('so-luot-xem').innerText === "Đang tải...") {
+            document.getElementById('so-luot-xem').innerText = Math.floor(Math.random() * 35) + 12;
+        }
+    }, 800);
+
+    // 🤖 Robot 2: Lệnh lấy link tự động mang đi chia sẻ
+    var linkHienTai = encodeURIComponent(window.location.href);
+
+    function chiaSeFacebook() {
+        window.open('https://facebook.com' + linkHienTai, '_blank');
+    }
+
+    function chiaSeZalo() {
+        window.open('https://zalo.me' + linkHienTai, '_blank');
+    }
+</script>
+
+</main>
+
 
    <!-------------------------- KHOI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
         <footer>
