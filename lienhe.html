@@ -92,42 +92,68 @@
 </div>
 
 <!=========================NOI DUNG===============================================>
- <div class="container-lienhe">
+```html
+<div class="container-lienhe">
+
 <form action="https://api.web3forms.com/submit" method="POST">
-    <!-- Dòng mã Access Key cũ của bạn giữ nguyên -->
+
+    <!-- Mã Access Key Web3Forms -->
     <input type="hidden" name="access_key" value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
 
-    <!-- 👑 DÒNG LỆNH MỚI: THAY THẾ DÒNG CHỮ TIẾNG ANH MẶC ĐỊNH TRONG EMAIL -->
+    <!-- Tên người nhận hiển thị trong email -->
     <input type="hidden" name="from_name" value="Lời nhắn gửi Giáo xứ Hồng Ân">
-    <input type="hidden" name="subject" value="🔔 Có lời nhắn liên hệ mới từ Website Giáo Xứ">
-    <input type="hidden" name="message" value="Kính chào Ban Truyền Thông, hệ thống website Giáo xứ vừa tiếp nhận một thư liên hệ mới từ bà con giáo dân với thông tin chi tiết như sau:">
 
+    <!-- Tiêu đề email -->
+    <input type="hidden" name="subject" value="🔔 Có lời nhắn liên hệ mới từ Website Giáo xứ Hồng Ân">
 
+    <!-- Nội dung thông báo -->
+    <input type="hidden" name="message" value="Website Giáo xứ Hồng Ân vừa nhận được một lời nhắn liên hệ mới.">
 
-        <!-- 3. CÁC Ô NHẬP LIỆU BÊN DƯỚI (Bạn giữ nguyên, chỉ cần kiểm tra xem các ô nhập đã có thuộc tính 'name' chưa nhé) -->
-        <div class="form-group">
-            <label for="name">Họ và Tên:</label>
-            <!-- Bắt buộc phải có name="Họ và Tên" để trong email hiện rõ tên người gửi -->
-            <input type="text" id="name" name="Họ và Tên" placeholder="Nhập họ và tên của bạn..." required>
-        </div>
+    <!-- Họ và tên -->
+    <div class="form-group">
+        <label for="name">Họ và Tên:</label>
+        <input 
+            type="text" 
+            id="name" 
+            name="Họ và Tên" 
+            placeholder="Nhập họ và tên của bạn..." 
+            required>
+    </div>
 
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="Email liên hệ" placeholder="Nhập email của bạn..." required>
-        </div>
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="Email liên hệ" 
+            placeholder="Nhập email của bạn..." 
+            required>
+    </div>
 
-        <div class="form-group">
-            <label for="message">Lời nhắn:</label>
-            <textarea id="message" name="Lời nhắn gửi Giáo xứ" rows="5" placeholder="Bạn muốn nhắn gửi điều gì đến Giáo xứ?" required></textarea>
-        </div>
+    <!-- Lời nhắn -->
+    <div class="form-group">
+        <label for="message">Lời nhắn:</label>
+        <textarea 
+            id="message" 
+            name="Lời nhắn gửi Giáo xứ" 
+            rows="5" 
+            placeholder="Bạn muốn nhắn gửi điều gì đến Giáo xứ?" 
+            required></textarea>
+    </div>
 
-        <!-- 4. THÊM DÒNG TỰ ĐỘNG CHUYỂN HƯỚNG (Không bắt buộc): Sau khi giáo dân bấm gửi, trang web sẽ tự load lại chính trang liên hệ này sạch sẽ -->
-       <input type="hidden" name="redirect" value="https://giaoxuhongan.github.io/giaoxuhongan/lienhe.html">
+    <!-- Chống spam -->
+    <input type="checkbox" name="botcheck" style="display:none;">
 
-        <button type="submit" class="btn-submit">Gửi Tin Nhắn</button>
-    </form>
+    <!-- Nút gửi -->
+    <button type="submit" class="btn-submit">
+        Gửi Tin Nhắn
+    </button>
+
+</form>
+
 </div>
-
+```
 
  
 <!-------------------------- THÀNH PHẦN MỚI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
