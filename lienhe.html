@@ -93,14 +93,21 @@
 
 <!=========================NOI DUNG===============================================>
 
-<!-- TÌM ĐOẠN THẺ FORM LIÊN HỆ TRONG FILE LIENHE.HTML CỦA BẠN -->
-<div class="container-lienhe">
-    
-    <!-- 1. SỬA ĐƯỜNG DẪN ACTION: Ép form gửi dữ liệu lên tổng đài Web3Forms -->
-    <form action="https://web3forms.com/submit" method="POST">
-        
-        <!-- 2. THÊM DÒNG LỆNH ẨN NÀY: Dán đoạn mã Access Key bạn vừa lấy ở Bước 1 vào đây -->
-        <input type="hidden" name="access_key" value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
+<form action="https://web3forms.com" method="POST">
+    <!-- Dòng mã Access Key cũ của bạn giữ nguyên -->
+    <input type="hidden" name="access_key" value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
+
+    <!-- 👑 DÒNG LỆNH MỚI: THAY THẾ DÒNG CHỮ TIẾNG ANH MẶC ĐỊNH TRONG EMAIL -->
+    <input type="hidden" name="from_name" value="Lời nhắn gửi Giáo xứ Hồng Ân">
+    <input type="hidden" name="subject" value="🔔 Có lời nhắn liên hệ mới từ Website Giáo Xứ">
+    <input type="hidden" name="message" value="Kính chào Ban Truyền Thông, hệ thống website Giáo xứ vừa tiếp nhận một thư liên hệ mới từ bà con giáo dân với thông tin chi tiết như sau:">
+
+    <!-- Các ô nhập Họ tên, Email, Lời nhắn cũ ở phía dưới... BẠN GIỮ NGUYÊN VẸN -->
+    <div class="form-group">
+        <label for="name">Họ và Tên:</label>
+        <input type="text" id="name" name="Họ và Tên" placeholder="Nhập họ và tên của bạn..." required>
+    </div>
+
 
         <!-- 3. CÁC Ô NHẬP LIỆU BÊN DƯỚI (Bạn giữ nguyên, chỉ cần kiểm tra xem các ô nhập đã có thuộc tính 'name' chưa nhé) -->
         <div class="form-group">
