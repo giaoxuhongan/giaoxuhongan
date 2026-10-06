@@ -46,7 +46,8 @@
             <ul class="dropdown-content">
                     <li><a href="tingiaoxu.html">Tin Giáo Xứ</a></li>
                     <li><a href="tingiaophan.html">Tin Giáo Phận</a></li>
-                    <li><a href="tingiaohoi.html">Tin Giáo Hội</a></li>
+                    <li><a href="tingiaohoi.html">Giáo Hội Việt Nam</a></li>
+                    <li><a href="tintoancau.html">Giáo Hội Toàn Cầu</a></li>
                     </ul>
                     </li>
 
@@ -88,7 +89,6 @@
 <div style="max-width: 1200px; margin: 20px auto; padding: 0 15px;">
     <iframe src="boxloichua.html" style="width: 100%; height: 600px; border: none; overflow: hidden;"></iframe>
 </div>
-
 
 <!---------------------- LENH GOI BANNER SUY NIEM ------------------------>
 
@@ -217,24 +217,6 @@
             <p>© 2026 Giáo Xứ Hồng Ân - Được thiết kế bởi Ban Truyền Thông Giáo Xứ</p>
         </div>
     </footer>
-
-    <!-- ROBOT HỨNG TÍN HIỆU VÀ ÉP KHUNG IFRAME CO GIÃN THEO RUỘT -->
-<script>
-window.addEventListener("message", function(event) {
-    // Nếu nhận đúng tín hiệu yêu cầu đổi chiều cao từ file ruột gửi ra
-    if (event.data && event.data.loai === "DOI_CHIEU_CAO") {
-        
-        // Tìm đúng cái iframe hộp Lời Chúa đang nằm trên trang chủ
-        // (Bạn nhớ kiểm tra xem iframe của bạn đã đặt id="khung-loi-chua" chưa nhé)
-        var iframe = document.getElementById("khung-loi-chua");
-        
-        if (iframe) {
-            // Ép cái khung iframe ngoài trang chủ giãn rộng vừa khít bằng chiều cao thực tế bên trong
-            iframe.style.height = event.data.giaTri + "px";
-        }
-    }
-});
-</script>
 
 
 </body>

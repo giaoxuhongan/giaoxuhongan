@@ -98,7 +98,14 @@ body { background: #ffffff; padding: 15px; }
     text-align: left !important; 
     cursor: pointer; /* THÊM DÒNG NÀY: Để rê chuột vào tiêu đề lớn hiện bàn tay click */
     display: block; /* THÊM DÒNG NÀY: Giúp vùng click vừa vặn với chữ */
-    width: 100% !important; 
+    width: 100% !important;
+              /* === THÊM CÁC DÒNG DƯỚI ĐÂY ĐỂ GIỚI HẠN DÒNG TIÊU ĐỀ TRÊN === */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Hiện tối đa 2 dòng, phần thừa biến thành dấu ... */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word; 
 } 
 .p-title:hover {
     text-decoration: underline; /* THÊM KHỐI NÀY: Gạch chân tiêu đề khi rê chuột vào */
@@ -183,6 +190,13 @@ body { background: #ffffff; padding: 15px; }
     color: #000000 !important; 
     line-height: 1.4; 
     text-align: left; 
+              /* === THÊM CÁC DÒNG DƯỚI ĐÂY ĐỂ GIỚI HẠN DÒNG TIÊU ĐỀ TRÊN === */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Hiện tối đa 2 dòng, phần thừa biến thành dấu ... */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
 } 
 
 .r-date { 
@@ -287,6 +301,11 @@ body { background: #ffffff; padding: 15px; }
 <script>
 // MẢNG DỮ LIỆU BÀI VIẾT (ĐOẠN XỬ LÝ CLICK CHUẨN XỊN)
 var DATA_1 = [
+    { title: "NGÀY HỌP MẶT GIÁO LÝ VIÊN - HUYNH TRƯỞNG: RỰC CHÁY NGỌN LỬA “HIỆP NHẤT - YÊU THƯƠNG”", 
+    img: "https://giaoxuhongan.com/files/assets/hinh_tin_tuc/834861245_122113907217481966_4459846546936736785_n.jpg", 
+    url: "tingiaoxu-hopmat-giaolyvien-hongan.html", 
+    date: "06/10/2026" },
+
     { title: "Rộn Ràng Đêm Hội Chợ Trung Thu Tại Giáo Xứ Hồng Ân", 
     img: "https://giaoxuhongan.com/files/tin/385/jpg/ron-rang-dem-hoi-cho-trung-thu-tai-giao-xu-hong-an.jpg", 
     url: "tingiaoxu-giao-xu-hong-an-hoi-cho-trung-thu-2026.html", 

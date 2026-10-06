@@ -82,6 +82,13 @@
             line-height: 1.4;
             margin-bottom: 5px;
             cursor: pointer;
+             /* === THÊM CÁC DÒNG DƯỚI ĐÂY ĐỂ GIỚI HẠN DÒNG TIÊU ĐỀ TRÊN === */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Hiện tối đa 2 dòng, phần thừa biến thành dấu ... */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
         }
         .yvb4-preview-title:hover {
             text-decoration: underline;
@@ -155,7 +162,20 @@
         }
 
         .yvb4-item-info { min-width: 0; flex: 1; }
-        .yvb4-item-title { color: #222222; font-size: 13.5px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+        .yvb4-item-title { 
+            color: #222222; 
+            font-size: 13.5px; 
+            font-weight: 700; 
+            line-height: 1.3; 
+            margin-bottom: 4px; 
+                /* Thêm các dòng dưới đây để giới hạn ẩn chữ thừa */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Thay số 2 bằng số dòng bạn muốn giới hạn (1, 2, hoặc 3...) */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word; /* Giúp ngắt từ đúng dòng tránh tràn */
+        }
         .yvb4-item.selected .yvb4-item-title { color: #087522; }
         .yvb4-item-date { color: #888888; font-size: 11px; }
     </style>
@@ -194,46 +214,46 @@
 ===================================================== */
 var DANH_SACH_TIN = [
     { 
-        title: "Thánh Lễ Khai Giảng Năm Học Giáo Lý Mới Tại Giáo Xứ", 
+        title: "TÀI LIỆU CẦU NGUYỆN CÙNG ĐỨC THÁNH CHA THÁNG 10/2026: CẦU NGUYỆN CHO MỤC VỤ CHĂM SÓC SỨC KHỎE TÂM THẦN", 
+        img: "https://giaoxuhongan.com/files/tin/392/png/tai-lieu-cau-nguyen-cung-duc-thanh-cha-thang-10/2026-cau-nguyen-cho-muc-vu-cham-soc-suc-khoe-tam-than.png", 
+        desc: "",
+        url: "tintoancau-tailieu-caunguyen.html", 
+        date: "03/10/2026" 
+    },
+    { 
+        title: "Ý CẦU NGUYỆN THÁNG 10/2026 CỦA ĐỨC GIÁO HOÀNG: CẦU CHO MỤC VỤ SỨC KHỎE TÂM THẦN", 
+        img: "https://giaoxuhongan.com/files/tin/391/jpg/y-cau-nguyen-thang-10/2026-cua-duc-giao-hoang-cau-cho-muc-vu-suc-khoe-tam-than.jpg", 
+        desc: "",
+        url: "tintoancau-ycaunguyen-cuaducthanhcha.html", 
+        date: "03/10/2026" 
+    },
+    { 
+        title: "Tông du Pháp (26/9): Đức Thánh Cha mời gọi Giáo hội Pháp đồng hành với các tân tòng", 
         img: "https://giaoxuhongan.com/files/tin/382/jpg/tong-du-phap-26/9-duc-thanh-cha-moi-goi-giao-hoi-phap-dong-hanh-voi-cac-tan-tong.jpg", 
         desc: "",
-        url: "../baiviettoancau/baiviet1.html", 
-        date: "27/09/2026" 
-    },
-    { 
-        title: "Ban Hành Giáo Tổ Chức Thăm Viếng Và Tặng Quà Bác Ái", 
-        img: "https://giaoxuhongan.com/files/tin/383/jpg/tong-du-phap-2026-dien-van-cua-dtc-leo-xiv-tai-unesco.jpg", 
-        desc: "",
-        url: "../baiviettoancau/baiviet1.htmll", 
-        date: "20/09/2026" 
-    },
-    { 
-        title: "Cộng Đoàn Giáo Xứ Long Trọng Mừng Kính Đại Lễ Các Thánh", 
-        img: "https://giaoxuhongan.com/files/tin/381/jpg/highlights-25/09/2026-ngay-dau-tien-trong-chuyen-tong-du-phap.jpg", 
-        desc: "",
-        url: "tin-le-cac-thanh.html", 
-        date: "15/09/2026" 
+        url: "tintoancau-tongduphap-ducthanhcha-moigoi.html", 
+        date: "26/09/2026" 
     },
     {
-       title: "Thánh Lễ Khai Giảng Năm Học Giáo Lý Mới Tại Giáo Xứ", 
+       title: "Tông du Pháp 2026] Diễn văn của ĐTC. Leo XIV tại UNESCO", 
+        img: "https://giaoxuhongan.com/files/tin/383/jpg/tong-du-phap-2026-dien-van-cua-dtc-leo-xiv-tai-unesco.jpg", 
+        desc: "",
+        url: "tintoancau-tongduphap-dienvancuaducthanhcha.html", 
+        date: "26/09/2026" 
+    },
+    { 
+        title: "[Highlights 25/09/2026] Ngày đầu tiên trong chuyến tông du Pháp", 
+        img: "https://giaoxuhongan.com/files/tin/381/jpg/highlights-25/09/2026-ngay-dau-tien-trong-chuyen-tong-du-phap.jpg", 
+        desc: "",
+        url: "tintoancau-ngaydautien-trongchuyentongdu.html", 
+        date: "25/09/2026" 
+    },
+    { 
+        title: "Đức Thánh Cha gặp chính quyền, xã hội dân sự và ngoại giao đoàn", 
         img: "https://giaoxuhongan.com/files/tin/365/png/duc-thanh-cha-gap-chinh-quyen-xa-hoi-dan-su-va-ngoai-giao-doan.png", 
         desc: "",
-        url: "tin-thieu-nhi.html", 
-        date: "27/09/2026" 
-    },
-    { 
-        title: "Ban Hành Giáo Tổ Chức Thăm Viếng Và Tặng Quà Bác Ái", 
-        img: "https://giaoxuhongan.com/files/tin/364/jpg/duc-hong-y-parolin-tai-phap-duc-thanh-cha-se-moi-goi-chau-au-bao-ve-song.jpg", 
-        desc: "",
-        url: "tin-bac-ai.html", 
-        date: "20/09/2026" 
-    },
-    { 
-        title: "Cộng Đoàn Giáo Xứ Long Trọng Mừng Kính Đại Lễ Các Thánh", 
-        img: "https://giaoxuhongan.com/files/tin/362/jpg/su-than-toa-thanh-tai-phap-bau-khi-cho-don-duc-thanh-cha-that-vui-tuoi-va-hy-vong.jpg", 
-        desc: "",
-        url: "tin-le-cac-thanh.html", 
-        date: "15/09/2026" 
+        url: "tintoancau-ducthanhcha-gapchinhquyen.html", 
+        date: "25/09/2026" 
     }
 ];
 
