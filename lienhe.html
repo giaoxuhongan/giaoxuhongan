@@ -92,67 +92,321 @@
 </div>
 
 <!=========================NOI DUNG===============================================>
+<!-- ============================= -->
+<!-- FORM LIÊN HỆ GIÁO XỨ HỒNG ÂN -->
+<!-- ============================= -->
+
+<style>
+.container-lienhe {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+.container-lienhe h2 {
+    margin: 0 0 8px;
+    text-align: center;
+    font-size: 26px;
+    color: #8b0000;
+    font-weight: 700;
+}
+
+.container-lienhe .lienhe-mo-ta {
+    text-align: center;
+    color: #777;
+    margin: 0 0 25px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 9px;
+    background: #fafafa;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b8860b;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(184,134,11,0.10);
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #8b0000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+    background: #a50000;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(139,0,0,0.20);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.thong-bao-lienhe {
+    display: none;
+    margin-top: 18px;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.thong-bao-thanhcong {
+    display: block;
+    background: #edf8f0;
+    color: #247a3d;
+    border: 1px solid #b9e2c2;
+}
+
+.thong-bao-loi {
+    display: block;
+    background: #fff1f1;
+    color: #a12626;
+    border: 1px solid #f0bcbc;
+}
+
+
+/* Hiển thị đẹp trên điện thoại */
+@media (max-width: 600px) {
+
+    .container-lienhe {
+        margin: 20px 12px;
+        padding: 22px 18px;
+        border-radius: 13px;
+    }
+
+    .container-lienhe h2 {
+        font-size: 22px;
+    }
+
+    .container-lienhe .lienhe-mo-ta {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+    }
+}
+</style>
+
 
 <div class="container-lienhe">
 
-<form action="https://api.web3forms.com/submit" method="POST">
+    <h2>Gửi lời nhắn đến Giáo xứ</h2>
 
-    <!-- Mã Access Key Web3Forms -->
-    <input type="hidden" name="access_key" value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
+    <p class="lienhe-mo-ta">
+        Quý ông bà, anh chị em có thể gửi lời nhắn hoặc ý kiến
+        đến Giáo xứ Hồng Ân qua biểu mẫu dưới đây.
+    </p>
 
-    <!-- Tên người nhận hiển thị trong email -->
-    <input type="hidden" name="from_name" value="Lời nhắn gửi Giáo xứ Hồng Ân">
 
-    <!-- Tiêu đề email -->
-    <input type="hidden" name="subject" value="🔔 Có lời nhắn liên hệ mới từ Website Giáo xứ Hồng Ân">
+    <form id="formLienHe"
+          action="https://api.web3forms.com/submit"
+          method="POST">
 
-    <!-- Nội dung thông báo -->
-    <input type="hidden" name="message" value="Website Giáo xứ Hồng Ân vừa nhận được một lời nhắn liên hệ mới.">
+        <!-- Web3Forms Access Key -->
+        <input type="hidden"
+               name="access_key"
+               value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
 
-    <!-- Họ và tên -->
-    <div class="form-group">
-        <label for="name">Họ và Tên:</label>
-        <input 
-            type="text" 
-            id="name" 
-            name="Họ và Tên" 
-            placeholder="Nhập họ và tên của bạn..." 
-            required>
-    </div>
+        <!-- Tên hiển thị người gửi -->
+        <input type="hidden"
+               name="from_name"
+               value="Website Giáo xứ Hồng Ân">
 
-    <!-- Email -->
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input 
-            type="email" 
-            id="email" 
-            name="Email liên hệ" 
-            placeholder="Nhập email của bạn..." 
-            required>
-    </div>
+        <!-- Tiêu đề email -->
+        <input type="hidden"
+               name="subject"
+               value="🔔 Có lời nhắn liên hệ mới từ Website Giáo xứ Hồng Ân">
 
-    <!-- Lời nhắn -->
-    <div class="form-group">
-        <label for="message">Lời nhắn:</label>
-        <textarea 
-            id="message" 
-            name="Lời nhắn gửi Giáo xứ" 
-            rows="5" 
-            placeholder="Bạn muốn nhắn gửi điều gì đến Giáo xứ?" 
-            required></textarea>
-    </div>
+        <!-- Chống spam -->
+        <input type="checkbox"
+               name="botcheck"
+               style="display:none;">
 
-    <!-- Chống spam -->
-    <input type="checkbox" name="botcheck" style="display:none;">
 
-    <!-- Nút gửi -->
-    <button type="submit" class="btn-submit">
-        Gửi Tin Nhắn
-    </button>
+        <!-- HỌ VÀ TÊN -->
+        <div class="form-group">
 
-</form>
+            <label for="name">
+                Họ và Tên
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="Họ và Tên"
+                placeholder="Nhập họ và tên của bạn..."
+                required>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="Email liên hệ"
+                placeholder="Nhập địa chỉ email của bạn..."
+                required>
+
+        </div>
+
+
+        <!-- LỜI NHẮN -->
+        <div class="form-group">
+
+            <label for="message">
+                Lời nhắn
+            </label>
+
+            <textarea
+                id="message"
+                name="Lời nhắn gửi Giáo xứ"
+                placeholder="Bạn muốn nhắn gửi điều gì đến Giáo xứ?"
+                required></textarea>
+
+        </div>
+
+
+        <!-- NÚT GỬI -->
+        <button
+            type="submit"
+            class="btn-submit"
+            id="btnGui">
+
+            Gửi Tin Nhắn
+
+        </button>
+
+
+        <!-- THÔNG BÁO -->
+        <div
+            id="thongBao"
+            class="thong-bao-lienhe">
+        </div>
+
+    </form>
 
 </div>
+
+
+<script>
+
+document.getElementById("formLienHe").addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const form = this;
+    const button = document.getElementById("btnGui");
+    const thongBao = document.getElementById("thongBao");
+
+    /* Đổi nút sang trạng thái đang gửi */
+    button.disabled = true;
+    button.innerHTML = "⏳ Đang gửi...";
+
+    thongBao.className = "thong-bao-lienhe";
+    thongBao.innerHTML = "";
+
+    try {
+
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form)
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            thongBao.className =
+                "thong-bao-lienhe thong-bao-thanhcong";
+
+            thongBao.innerHTML =
+                "✓ Cảm ơn bạn! Lời nhắn đã được gửi thành công đến Giáo xứ Hồng Ân.";
+
+            /* Xóa nội dung sau khi gửi */
+            form.reset();
+
+        } else {
+
+            throw new Error(
+                data.message || "Không thể gửi tin nhắn."
+            );
+
+        }
+
+    } catch (error) {
+
+        thongBao.className =
+            "thong-bao-lienhe thong-bao-loi";
+
+        thongBao.innerHTML =
+            "✕ Rất tiếc, chưa thể gửi lời nhắn. " +
+            "Vui lòng thử lại sau.";
+
+    }
+
+    /* Khôi phục nút */
+    button.disabled = false;
+    button.innerHTML = "Gửi Tin Nhắn";
+
+});
+
+</script>
 
 
 <!-------------------------- THÀNH PHẦN MỚI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
