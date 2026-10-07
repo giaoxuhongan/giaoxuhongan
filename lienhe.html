@@ -93,122 +93,176 @@
 
 <!=========================NOI DUNG===============================================>
 <style>
+/* ================================
+   FORM LIÊN HỆ - GIÁO XỨ HỒNG ÂN
+   ================================ */
+
 .container-lienhe {
     max-width: 650px;
-    margin: 30px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,.08);
-    border: 1px solid #eee;
+    margin: 30px auto 40px;
+    padding: 28px 30px 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
     box-sizing: border-box;
 }
 
+/* Tiêu đề */
 .container-lienhe h2 {
-    margin: 0 0 8px;
+    margin: 0;
+    padding-bottom: 13px;
     text-align: center;
-    color: #8b0000;
-    font-size: 26px;
+    color: #0F5132;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e5e5;
 }
 
+/* Dòng giới thiệu */
 .lienhe-mo-ta {
+    margin: 16px 0 25px;
     text-align: center;
     color: #777;
-    margin-bottom: 25px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
+/* Nhóm nhập */
 .form-group {
     margin-bottom: 18px;
 }
 
+/* Nhãn */
 .form-group label {
     display: block;
-    margin-bottom: 7px;
+    width: 100%;
+    margin: 0 0 7px 0;
+    padding: 0;
+    text-align: left !important;
+    color: #333;
+    font-size: 14px;
     font-weight: 600;
-    color: #444;
+    box-sizing: border-box;
 }
 
+/* Ô nhập */
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 13px 15px;
-    border: 1px solid #ddd;
-    border-radius: 9px;
+    padding: 12px 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 7px;
     background: #fafafa;
+    color: #333;
     font-size: 15px;
     font-family: inherit;
     box-sizing: border-box;
     outline: none;
+    transition: all 0.25s ease;
 }
 
+/* Khi bấm vào ô */
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #b8860b;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(184,134,11,.1);
+    border-color: #1689b5;
+    box-shadow: 0 0 0 3px rgba(22, 137, 181, 0.10);
 }
 
+/* Ô lời nhắn */
 .form-group textarea {
-    min-height: 130px;
+    min-height: 135px;
     resize: vertical;
 }
 
+/* Nút gửi */
 .btn-submit {
     width: 100%;
-    padding: 14px;
-    border: 0;
-    border-radius: 9px;
-    background: #8b0000;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
+    margin-top: 3px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 7px;
+    background: #0F5132;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
     cursor: pointer;
+    transition: all 0.25s ease;
 }
 
+/* Hover */
 .btn-submit:hover {
-    background: #a50000;
+    background: #146d43;
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.18);
 }
 
+/* Khi đang gửi */
 .btn-submit:disabled {
-    opacity: .7;
+    opacity: 0.7;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
+/* Thông báo */
 .thong-bao-lienhe {
     display: none;
-    margin-top: 18px;
-    padding: 13px;
-    border-radius: 8px;
+    margin-top: 16px;
+    padding: 12px 15px;
+    border-radius: 7px;
     text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
+/* Thành công */
 .thanh-cong {
     display: block;
     background: #edf8f0;
     color: #247a3d;
-    border: 1px solid #b9e2c2;
+    border: 1px solid #b9dfc2;
 }
 
+/* Lỗi */
 .loi {
     display: block;
-    background: #fff1f1;
+    background: #fff3f3;
     color: #a12626;
-    border: 1px solid #f0bcbc;
+    border: 1px solid #efc1c1;
 }
 
-@media (max-width:600px) {
+
+/* ================================
+   ĐIỆN THOẠI
+   ================================ */
+
+@media (max-width: 600px) {
+
     .container-lienhe {
-        margin: 20px 12px;
-        padding: 22px 18px;
+        margin: 20px 12px 30px;
+        padding: 22px 18px 24px;
+        border-radius: 12px;
     }
 
     .container-lienhe h2 {
         font-size: 22px;
     }
+
+    .lienhe-mo-ta {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+    }
 }
 </style>
 
+
+<!-- ================================
+     FORM LIÊN HỆ
+     ================================ -->
 
 <div class="container-lienhe">
 
@@ -224,22 +278,40 @@
           action="https://api.web3forms.com/submit"
           method="POST">
 
-        <!-- Web3Forms Access Key -->
+        <!-- ACCESS KEY -->
         <input type="hidden"
                name="access_key"
                value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
 
-        <!-- Tên website -->
+
+        <!-- TÊN HIỂN THỊ -->
         <input type="hidden"
                name="from_name"
+               id="fromName"
                value="Website Giáo xứ Hồng Ân">
 
-        <!-- Tiêu đề email -->
+
+        <!-- TIÊU ĐỀ EMAIL -->
         <input type="hidden"
                name="subject"
-               value="🔔 Có lời nhắn liên hệ mới từ Website Giáo xứ Hồng Ân">
+               value="Có lời nhắn liên hệ mới từ Website Giáo xứ Hồng Ân">
 
-        <!-- Chống spam -->
+
+        <!-- EMAIL TRẢ LỜI -->
+        <input type="hidden"
+               name="replyto"
+               id="replyTo"
+               value="">
+
+
+        <!-- NỘI DUNG EMAIL -->
+        <input type="hidden"
+               name="message"
+               id="emailMessage"
+               value="">
+
+
+        <!-- CHỐNG SPAM -->
         <input type="checkbox"
                name="botcheck"
                style="display:none;">
@@ -248,12 +320,13 @@
         <!-- HỌ VÀ TÊN -->
         <div class="form-group">
 
-            <label for="name">Họ và Tên</label>
+            <label for="name">
+                Họ và Tên
+            </label>
 
             <input
                 type="text"
                 id="name"
-                name="name"
                 placeholder="Nhập họ và tên của bạn..."
                 required>
 
@@ -263,12 +336,13 @@
         <!-- EMAIL -->
         <div class="form-group">
 
-            <label for="email">Email</label>
+            <label for="email">
+                Email
+            </label>
 
             <input
                 type="email"
                 id="email"
-                name="email"
                 placeholder="Nhập địa chỉ email của bạn..."
                 required>
 
@@ -278,11 +352,12 @@
         <!-- LỜI NHẮN -->
         <div class="form-group">
 
-            <label for="message">Lời nhắn</label>
+            <label for="messageText">
+                Lời nhắn
+            </label>
 
             <textarea
-                id="message"
-                name="message"
+                id="messageText"
                 rows="5"
                 placeholder="Bạn muốn nhắn gửi điều gì đến Giáo xứ?"
                 required></textarea>
@@ -290,6 +365,7 @@
         </div>
 
 
+        <!-- NÚT GỬI -->
         <button
             type="submit"
             class="btn-submit"
@@ -300,6 +376,7 @@
         </button>
 
 
+        <!-- THÔNG BÁO -->
         <div
             id="thongBao"
             class="thong-bao-lienhe">
@@ -311,19 +388,46 @@
 
 
 <script>
+
 document.getElementById("formLienHe").addEventListener("submit", async function(e) {
 
     e.preventDefault();
 
     const form = this;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("messageText").value.trim();
+
     const button = document.getElementById("btnGui");
     const thongBao = document.getElementById("thongBao");
 
+    /* Tạo nội dung email tiếng Việt */
+    const emailContent =
+        "HỌ VÀ TÊN: " + name +
+        "\n\n" +
+        "EMAIL: " + email +
+        "\n\n" +
+        "LỜI NHẮN:\n" +
+        message;
+
+
+    /* Đưa thông tin vào Web3Forms */
+    document.getElementById("emailMessage").value = emailContent;
+
+    document.getElementById("fromName").value =
+        name + " - Website Giáo xứ Hồng Ân";
+
+    document.getElementById("replyTo").value = email;
+
+
+    /* Trạng thái đang gửi */
     button.disabled = true;
     button.innerHTML = "⏳ Đang gửi...";
 
     thongBao.className = "thong-bao-lienhe";
     thongBao.innerHTML = "";
+
 
     try {
 
@@ -334,6 +438,7 @@ document.getElementById("formLienHe").addEventListener("submit", async function(
 
         const data = await response.json();
 
+
         if (data.success) {
 
             thongBao.className =
@@ -342,11 +447,16 @@ document.getElementById("formLienHe").addEventListener("submit", async function(
             thongBao.innerHTML =
                 "✓ Cảm ơn bạn! Lời nhắn đã được gửi thành công đến Giáo xứ Hồng Ân.";
 
-            form.reset();
+            /* Xóa form */
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("messageText").value = "";
 
         } else {
 
-            throw new Error(data.message);
+            throw new Error(
+                data.message || "Không thể gửi tin nhắn."
+            );
 
         }
 
@@ -360,11 +470,16 @@ document.getElementById("formLienHe").addEventListener("submit", async function(
 
     }
 
+
+    /* Khôi phục nút */
     button.disabled = false;
     button.innerHTML = "Gửi Tin Nhắn";
 
 });
+
 </script>
+
+
 
 <!-------------------------- THÀNH PHẦN MỚI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
     <footer>
