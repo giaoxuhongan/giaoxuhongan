@@ -92,35 +92,29 @@
 </div>
 
 <!=========================NOI DUNG===============================================>
-<!-- ============================= -->
-<!-- FORM LIÊN HỆ GIÁO XỨ HỒNG ÂN -->
-<!-- ============================= -->
-
 <style>
 .container-lienhe {
     max-width: 650px;
     margin: 30px auto;
     padding: 30px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    border: 1px solid #eeeeee;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    border: 1px solid #eee;
     box-sizing: border-box;
 }
 
 .container-lienhe h2 {
     margin: 0 0 8px;
     text-align: center;
-    font-size: 26px;
     color: #8b0000;
-    font-weight: 700;
+    font-size: 26px;
 }
 
-.container-lienhe .lienhe-mo-ta {
+.lienhe-mo-ta {
     text-align: center;
     color: #777;
-    margin: 0 0 25px;
-    font-size: 15px;
+    margin-bottom: 25px;
     line-height: 1.6;
 }
 
@@ -133,28 +127,26 @@
     margin-bottom: 7px;
     font-weight: 600;
     color: #444;
-    font-size: 15px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 13px 15px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #ddd;
     border-radius: 9px;
     background: #fafafa;
     font-size: 15px;
     font-family: inherit;
     box-sizing: border-box;
     outline: none;
-    transition: all 0.25s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: #b8860b;
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(184,134,11,0.10);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(184,134,11,.1);
 }
 
 .form-group textarea {
@@ -164,74 +156,55 @@
 
 .btn-submit {
     width: 100%;
-    padding: 14px 20px;
-    border: none;
+    padding: 14px;
+    border: 0;
     border-radius: 9px;
     background: #8b0000;
-    color: #ffffff;
+    color: white;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
 }
 
 .btn-submit:hover {
     background: #a50000;
-    transform: translateY(-1px);
-    box-shadow: 0 5px 15px rgba(139,0,0,0.20);
 }
 
 .btn-submit:disabled {
-    opacity: 0.7;
+    opacity: .7;
     cursor: not-allowed;
-    transform: none;
 }
 
 .thong-bao-lienhe {
     display: none;
     margin-top: 18px;
-    padding: 13px 15px;
+    padding: 13px;
     border-radius: 8px;
-    font-size: 14px;
-    line-height: 1.5;
     text-align: center;
 }
 
-.thong-bao-thanhcong {
+.thanh-cong {
     display: block;
     background: #edf8f0;
     color: #247a3d;
     border: 1px solid #b9e2c2;
 }
 
-.thong-bao-loi {
+.loi {
     display: block;
     background: #fff1f1;
     color: #a12626;
     border: 1px solid #f0bcbc;
 }
 
-
-/* Hiển thị đẹp trên điện thoại */
-@media (max-width: 600px) {
-
+@media (max-width:600px) {
     .container-lienhe {
         margin: 20px 12px;
         padding: 22px 18px;
-        border-radius: 13px;
     }
 
     .container-lienhe h2 {
         font-size: 22px;
-    }
-
-    .container-lienhe .lienhe-mo-ta {
-        font-size: 14px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 16px;
     }
 }
 </style>
@@ -256,7 +229,7 @@
                name="access_key"
                value="71d1be46-b8a1-49bb-81ac-b4f44a255cb3">
 
-        <!-- Tên hiển thị người gửi -->
+        <!-- Tên website -->
         <input type="hidden"
                name="from_name"
                value="Website Giáo xứ Hồng Ân">
@@ -275,14 +248,12 @@
         <!-- HỌ VÀ TÊN -->
         <div class="form-group">
 
-            <label for="name">
-                Họ và Tên
-            </label>
+            <label for="name">Họ và Tên</label>
 
             <input
                 type="text"
                 id="name"
-                name="Họ và Tên"
+                name="name"
                 placeholder="Nhập họ và tên của bạn..."
                 required>
 
@@ -292,14 +263,12 @@
         <!-- EMAIL -->
         <div class="form-group">
 
-            <label for="email">
-                Email
-            </label>
+            <label for="email">Email</label>
 
             <input
                 type="email"
                 id="email"
-                name="Email liên hệ"
+                name="email"
                 placeholder="Nhập địa chỉ email của bạn..."
                 required>
 
@@ -309,20 +278,18 @@
         <!-- LỜI NHẮN -->
         <div class="form-group">
 
-            <label for="message">
-                Lời nhắn
-            </label>
+            <label for="message">Lời nhắn</label>
 
             <textarea
                 id="message"
-                name="Lời nhắn gửi Giáo xứ"
+                name="message"
+                rows="5"
                 placeholder="Bạn muốn nhắn gửi điều gì đến Giáo xứ?"
                 required></textarea>
 
         </div>
 
 
-        <!-- NÚT GỬI -->
         <button
             type="submit"
             class="btn-submit"
@@ -333,7 +300,6 @@
         </button>
 
 
-        <!-- THÔNG BÁO -->
         <div
             id="thongBao"
             class="thong-bao-lienhe">
@@ -345,7 +311,6 @@
 
 
 <script>
-
 document.getElementById("formLienHe").addEventListener("submit", async function(e) {
 
     e.preventDefault();
@@ -354,7 +319,6 @@ document.getElementById("formLienHe").addEventListener("submit", async function(
     const button = document.getElementById("btnGui");
     const thongBao = document.getElementById("thongBao");
 
-    /* Đổi nút sang trạng thái đang gửi */
     button.disabled = true;
     button.innerHTML = "⏳ Đang gửi...";
 
@@ -373,41 +337,34 @@ document.getElementById("formLienHe").addEventListener("submit", async function(
         if (data.success) {
 
             thongBao.className =
-                "thong-bao-lienhe thong-bao-thanhcong";
+                "thong-bao-lienhe thanh-cong";
 
             thongBao.innerHTML =
                 "✓ Cảm ơn bạn! Lời nhắn đã được gửi thành công đến Giáo xứ Hồng Ân.";
 
-            /* Xóa nội dung sau khi gửi */
             form.reset();
 
         } else {
 
-            throw new Error(
-                data.message || "Không thể gửi tin nhắn."
-            );
+            throw new Error(data.message);
 
         }
 
     } catch (error) {
 
         thongBao.className =
-            "thong-bao-lienhe thong-bao-loi";
+            "thong-bao-lienhe loi";
 
         thongBao.innerHTML =
-            "✕ Rất tiếc, chưa thể gửi lời nhắn. " +
-            "Vui lòng thử lại sau.";
+            "✕ Rất tiếc, chưa thể gửi lời nhắn. Vui lòng thử lại sau.";
 
     }
 
-    /* Khôi phục nút */
     button.disabled = false;
     button.innerHTML = "Gửi Tin Nhắn";
 
 });
-
 </script>
-
 
 <!-------------------------- THÀNH PHẦN MỚI: CHÂN TRANG 3 CỘT CHUYÊN NGHIỆP ------------------------------>
     <footer>
